@@ -13,8 +13,8 @@ const authLink = setContext(() => {
   };
 });
 const httpLink = createHttpLink({
-    uri: 'http://localhost:5000'
-})
+  uri: "https://serene-sierra-97965.herokuapp.com/",
+});
 const client = new ApolloClient({
     link: authLink.concat(httpLink),
     cache: new InMemoryCache()
